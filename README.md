@@ -1,2 +1,2 @@
-# HelixJumpCopy
-Helix Jump oyununu kopyalayarak oyun içerisindeki mekanikleri öğrenerek kendimi geliştiriyorum.
+# HelixJumpClone
+Helix Jump oyununu klonlayarak oyun içerisindeki mekanikleri öğrenerek kendimi geliştiriyorum.
