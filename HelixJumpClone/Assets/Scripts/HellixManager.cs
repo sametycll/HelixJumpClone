@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class HellixManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject[] rings;
+    [SerializeField] int countOfRings = 10;
+    [SerializeField] float ringofDistance = 5f;
+    float yPos;
+
+    private void Start()
     {
-        
+        for (int i = 0; i < countOfRings; i++)
+        {
+            if (i ==0)
+            {
+                SpawnRings(0);
+            }
+            else
+            {
+                SpawnRings(Random.Range(1,rings.Length-1));
+            }
+
+        }
+        SpawnRings(rings.Length-1);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnRings(int index)
     {
-        
+        GameObject newRing = Instantiate(rings[index], new Vector3(transform.position.x,yPos,transform.position.z),Quaternion.identity);
+        yPos -= ringofDistance;
+        newRing.transform.parent = transform;
     }
+
+     
+
+
 }

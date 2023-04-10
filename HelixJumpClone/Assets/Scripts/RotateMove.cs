@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class RotateMove : MonoBehaviour
 {
-    [SerializeField] public float rotateSpeed = 160f;
+    [SerializeField] public float rotateSpeed = 200f;
+    [SerializeField] public float rotateSpeedMobile = 60f;
     private float moveX;
 
     
     void Update()
     {
-        moveX = Input.GetAxis("Mouse X");
-
+     #if UNITY_EDITOR
+        //for pc
         if (Input.GetMouseButton(0))
         {
-            transform.Rotate(0f, moveX*rotateSpeed*Time.deltaTime,0f);
-
+            moveX = Input.GetAxis("Mouse X"); //or use raw
+            transform.Rotate(transform.position.x, moveX*rotateSpeed*Time.deltaTime,transform.position.z);
+        }
+     #elif UNITY_ANDROID
+        //for mobile
+        if (Input.touchCount >0 && Input.GetTouch(0).phase ==TouchPhase.Moved)
+        {
+            float xDeltaPos = Input.GetTouch(0).deltaPosition.x;
+            transform.Rotate(transform.position.x, xDeltaPos * rotateSpeedMobile * Time.deltaTime, transform.position.z);
 
         }
+     #endif
+
     }
 }

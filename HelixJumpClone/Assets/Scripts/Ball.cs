@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
      Rigidbody rb;
-    [SerializeField] float jumpForce;
+    [SerializeField] float jumpForce=150f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -13,6 +13,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        rb.AddForce(Vector3.up * jumpForce);
+        rb.velocity = new Vector3(rb.velocity.x, jumpForce*Time.deltaTime,rb.velocity.z);
+        //rb.AddForce(Vector3.up * jumpForce);
     }
 }
