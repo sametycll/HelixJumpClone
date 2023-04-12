@@ -347,10 +347,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/AudioManager.cs"
 "Assets/Scripts/Ball.cs"
 "Assets/Scripts/CameraFollow.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/HellixManager.cs"
+"Assets/Scripts/Ring.cs"
 "Assets/Scripts/RotateMove.cs"
+"Assets/Scripts/Sound.cs"
 -langversion:9.0
 
 /deterministic

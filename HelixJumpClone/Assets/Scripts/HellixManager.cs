@@ -5,12 +5,14 @@ using UnityEngine;
 public class HellixManager : MonoBehaviour
 {
     [SerializeField] GameObject[] rings;
-    [SerializeField] int countOfRings = 10;
+    [SerializeField] public int countOfRings;
     [SerializeField] float ringofDistance = 5f;
     float yPos;
 
     private void Start()
     {
+        countOfRings = GameManager.currentLevelIndex + 5;
+
         for (int i = 0; i < countOfRings; i++)
         {
             if (i ==0)
