@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
             {
                 PlayerPrefs.SetInt("currentLevelIndex", currentLevelIndex + 1);
                 SceneManager.LoadScene(0);
+                FindObjectOfType<ColorManager>().ChangeColor();
+                
             }
         }
         

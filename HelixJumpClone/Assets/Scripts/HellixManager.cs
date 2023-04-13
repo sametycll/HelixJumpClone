@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HellixManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] rings;
+    [SerializeField] public GameObject[] rings;
     [SerializeField] public int countOfRings;
     [SerializeField] float ringofDistance = 5f;
     float yPos;

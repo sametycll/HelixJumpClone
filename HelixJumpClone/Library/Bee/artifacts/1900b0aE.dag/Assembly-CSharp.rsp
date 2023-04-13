@@ -350,6 +350,7 @@
 "Assets/Scripts/AudioManager.cs"
 "Assets/Scripts/Ball.cs"
 "Assets/Scripts/CameraFollow.cs"
+"Assets/Scripts/ColorManager.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/HellixManager.cs"
 "Assets/Scripts/Ring.cs"
